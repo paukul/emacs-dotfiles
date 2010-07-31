@@ -48,11 +48,29 @@
 ;; Textmate.el - http://github.com/defunkt/textmate.el
 (require 'textmate)
 
+;; Cucumber
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/cucumber"))
+(require 'feature-mode)
+(setq feature-default-language "en")
+(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
+(yas/load-directory (concat dotfiles-dir "/vendor/cucumber/snippets"))
+
+;; haml
+(require 'haml-mode)
+;; YAML
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
 ;; Peepopen!
 (require 'peepopen)
 (textmate-mode t)
 (peepopen-bind-keys)
-
 ;; For Emacs on Mac OS X http://emacsformacosx.com/ and Aquamacs.
 ;; Opens files in the existing frame instead of making new ones.
 (setq ns-pop-up-frames nil)
+
+;; Ack-grep
+(autoload 'ack-same "full-ack" nil t)
+(autoload 'ack "full-ack" nil t)
+(autoload 'ack-find-same-file "full-ack" nil t)
+(autoload 'ack-find-file "full-ack" nil t)
