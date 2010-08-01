@@ -1,0 +1,3 @@
+[submodule "vendor/rhtml-mode"]
+  path = vendor/rhtml-mode
+  url = http://github.com/eschulte/rhtml.git
