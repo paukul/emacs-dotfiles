@@ -8,7 +8,7 @@
                            )))
             (set (make-local-variable 'indent-tabs-mode) 'nil)
             (set (make-local-variable 'tab-width) 2)
-            (define-key ruby-mode-map "C-m" 'newline-and-indent) ;Not sure if this line is 100% right but it works!
+            (define-key ruby-mode-map [(shift control)] 'newline-and-indent)
             (require 'ruby-electric)
             (ruby-electric-mode t)
             ))
