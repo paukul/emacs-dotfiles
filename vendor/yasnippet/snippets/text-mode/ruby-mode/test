@@ -1,0 +1,6 @@
+# name: test
+#group : general
+# --
+test "${1:should }${2:do something}" do
+     $0
+end
