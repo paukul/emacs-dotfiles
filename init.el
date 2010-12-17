@@ -20,6 +20,8 @@
 (require 'uniquify)
 (require 'ansi-color)
 (require 'recentf)
+(require 'revbufs)
+;; (require 'textmate-links)
 
 ;; ELPA package manager
 (require 'package)
