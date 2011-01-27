@@ -71,8 +71,9 @@
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 (yas/load-directory (concat dotfiles-dir "/vendor/cucumber/snippets"))
 
-;; haml
+;; haml and sass
 (require 'haml-mode)
+(require 'sass-mode)
 ;; YAML
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
